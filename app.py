@@ -14,7 +14,7 @@ from flask_cors import CORS
 import concurrent.futures, traceback, os
 
 app = Flask(__name__, static_folder='.', static_url_path='')
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # ── 모듈 임포트 ──────────────────────────────────────
 _import_errors = {}
